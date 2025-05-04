@@ -39,7 +39,8 @@ header.header button {
 /*  MAIN CONTENT (Articles + Aside)  */
 .main-content {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    flex-direction: column;
 }
 
 /* Articles Section (Green background, Red buttons) */
@@ -79,9 +80,29 @@ footer.footer button {
     background-color: #F86808CB; 
 }
 
-/*  MOBILE RESPONSIVENESS  */
-@media (max-width: 600px) {
+/*  RESPONSIVENESS  */
+@media (min-width: 600px) {
     .main-content {
-        flex-direction: column; /* Stacks articles and aside on mobile */
+        flex-direction: row-reverse;
+    }
+    
+    aside.aside {
+        flex: 1;
+       
+    }
+    
+    section.articles {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    
+    aside.aside button {
+        height: 100%;
+        
+    }
+    .footer{
+        margin-top:10px;
     }
 }
